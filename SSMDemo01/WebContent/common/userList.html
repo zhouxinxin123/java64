@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+	</head>
+	<body>
+		<div id="userList"></div>
+		
+		<div id="buttom" style="width:100%;text-align: center;">
+			<a href="javascript:upPage()">上一页</a>&nbsp;&nbsp;&nbsp;
+			第<input type="text" style="width: 15px;" id="page" value="1" onchange="changevalue()">页&nbsp;&nbsp;&nbsp;
+			<a href="javascript:downPage()">下一页</a>&nbsp;&nbsp;&nbsp;
+			共<span id="total"></span>条&nbsp;&nbsp;&nbsp;
+			共<span id="totalPage"></span>页&nbsp;&nbsp;&nbsp;
+			每页<input type="text" style="width: 15px;" id="rows" value="10" onchange="changeRows()">条
+		</div>
+		
+		<script type="text/javascript" src="../js/userList.js"></script>
+	</body>
+</html>
