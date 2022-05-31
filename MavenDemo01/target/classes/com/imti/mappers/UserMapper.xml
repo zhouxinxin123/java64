@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imti.dao.UserInfoDao">
+
+	<!-- 登录 -->
+	<select id="login" resultType="UserInfo">
+		select
+			user_id,user_name,user_pwd
+		from
+			t_userinfo
+		<where>
+			user_delflag=0
+		and
+			user_name=#{user_name}
+		and
+			user_pwd=#{user_pwd}
+		</where>
+	</select>
+
+
+	<!-- 查询 -->	
+	<select id="finduserList" resultType="UserInfo" parameterType="Map">
+		select
+			user_id,user_name,user_pwd,user_age,user_remark,user_createtime,user_updatetime
+		from
+			t_userInfo
+		<where>
+			user_delflag=0
+		<if test="searchName!=null">
+		and
+			user_name like concat('%',#{searchName},'%')
+		order by
+			user_createtime desc
+		</if>
+		limit #{start},#{rows}
+		</where>
+	</select>
+	
+	<!-- 查询总条数 -->
+	<select id="findTotalUserInfo" resultType="int" parameterType="Map">
+		select
+			count(*)
+		from
+			t_userInfo
+		<where>
+			user_delflag=0
+		<if test="searchName!=null">
+		and
+			user_name like concat('%',#{searchName},'%')
+		</if>
+		</where>
+	</select>
+	
+	<!-- 查询是否重名 -->
+	<select id="findOneUserInfo" parameterType="UserInfo" resultType="UserInfo">
+		select
+			user_name
+		from
+			t_userInfo
+		where
+			user_delflag=0
+		and
+			user_name=#{user_name}
+	</select>
+	
+	<!-- 新增 -->
+	<insert id="insertUserInfo" parameterType="UserInfo">
+		insert into
+			t_userInfo (user_name,user_pwd,user_age,user_remark,opt_id)
+		values
+			(#{user_name},#{user_pwd},#{user_age},#{user_remark},#{opt_id})
+	</insert>
+	
+	<!-- 修改 -->
+	<update id="updateUserInfo" parameterType="UserInfo">
+		update
+			t_userInfo
+		<set>
+			<if test="user_name!=null">
+				user_name=#{user_name},
+			</if>
+			<if test="user_pwd!=null">
+				user_pwd=#{user_pwd},
+			</if>
+			<if test="user_age!=null">
+				user_age=#{user_age},
+			</if>
+			<if test="user_remark!=null">
+				user_remark=#{user_remark},
+			</if>
+				user_updatetime=now(),
+		</set>
+		where
+			user_id=#{user_id}
+	</update>
+	
+	<!-- 删除 -->
+	<update id="deleteUserInfo" parameterType="UserInfo">
+		update
+			t_userInfo
+		set
+			user_delflag=1
+		where
+			user_id=#{user_id}
+	</update>
+	
+</mapper> 

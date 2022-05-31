@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+	</head>
+	<body>
+		<form id="saveUserInfo">
+			<input type="hidden" name="user_id" id="user_id"/>
+			<table align="center">
+				<tr>
+					<th colspan="2">编辑</th>
+				</tr>
+				<tr height="25px">
+					<td colspan="2" id="space" align="center"></td>
+				</tr>
+				<tr>
+					<td>用户名：</td>
+					<td><input type="text" name="user_name" id="user_name"/></td>
+				</tr>
+				<tr>
+					<td>密码：</td>
+					<td><input type="password" name="user_pwd" id="user_pwd"/></td>
+				</tr>
+				<tr>
+					<td>年龄：</td>
+					<td><input type="text" name="user_age" id="user_age"/></td>
+				</tr>
+				<tr>
+					<td>备注：</td>
+					<td><input type="text" name="user_remark" id="user_remark"/></td>
+				</tr>
+				<tr>
+					<th colspan="2">
+						<input type="button" value="保存" onclick="saveUserInfo()"/>
+					</th>
+				</tr>
+			</table>
+		</form>
+		
+		<script type="text/javascript" src="../js/editUserInfo.js"></script>
+	</body>
+</html>

@@ -1,0 +1,165 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.imti</groupId>
+  <artifactId>MavenDemo01</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>MavenDemo01 Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- spring-aop的jar包 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aop</artifactId>
+	    <version>5.0.8.RELEASE</version>
+	</dependency>
+    <!-- spring-aspects的jar包 -->
+    <dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aspects</artifactId>
+	    <version>5.0.8.RELEASE</version>
+	</dependency>
+    <!-- spring-context的jar包 -->
+    <dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>5.0.8.RELEASE</version>
+	</dependency>
+	<!-- spring-jdbc的jar包 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>5.0.8.RELEASE</version>
+	</dependency>
+	<!-- spring-orm的jar包 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-orm</artifactId>
+	    <version>5.0.8.RELEASE</version>
+	</dependency>
+	<!-- spring-web的jar包 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-web</artifactId>
+	    <version>5.0.8.RELEASE</version>
+	</dependency>
+	<!-- spring-webmvc的jar包 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>5.0.8.RELEASE</version>
+	</dependency>
+	<!-- poi的jar包 -->
+	<dependency>
+	    <groupId>poi</groupId>
+	    <artifactId>poi</artifactId>
+	    <version>2.5.1-final-20040804</version>
+	</dependency>
+	<!-- ognl的jar包 -->
+	<dependency>
+	    <groupId>ognl</groupId>
+	    <artifactId>ognl</artifactId>
+	    <version>3.0.8</version>
+	</dependency>
+	<!-- mysql的jar包 -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>5.1.6</version>
+	</dependency>
+	<!-- mybatis-spring的jar包 -->
+	<dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis-spring</artifactId>
+	    <version>1.3.1</version>
+	</dependency>
+	<!-- mybatis的jar包 -->
+	<dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis</artifactId>
+	    <version>3.4.6</version>
+	</dependency>
+	<!-- log4j的jar包 -->
+	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>1.2.17</version>
+	</dependency>
+	<!-- jackson-module-jaxb-annotations的jar包 -->
+	<dependency>
+	    <groupId>com.fasterxml.jackson.module</groupId>
+	    <artifactId>jackson-module-jaxb-annotations</artifactId>
+	    <version>2.12.3</version>
+	</dependency>
+	<!-- jackson-mapper-asl的jar包 -->
+	<dependency>
+	    <groupId>org.codehaus.jackson</groupId>
+	    <artifactId>jackson-mapper-asl</artifactId>
+	    <version>1.9.13</version>
+	</dependency>
+	<!-- jackson-core-asl的jar包 -->
+	<dependency>
+	    <groupId>org.codehaus.jackson</groupId>
+	    <artifactId>jackson-core-asl</artifactId>
+	    <version>1.9.13</version>
+	</dependency>
+	<!-- commons-math3的jar包 -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-math3</artifactId>
+	    <version>3.6.1</version>
+	</dependency>
+	<!-- commons-logging的jar包 -->
+	<dependency>
+	    <groupId>commons-logging</groupId>
+	    <artifactId>commons-logging</artifactId>
+	    <version>1.1.1</version>
+	</dependency>
+	<!-- com.springsource.org.aspectj.weaver的jar包 -->
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>com.springsource.org.aspectj.weaver</artifactId>
+	    <version>1.6.10.RELEASE</version>
+	</dependency>
+	<!-- com.springsource.org.aopalliance的jar包 -->
+	<dependency>
+	    <groupId>org.aopalliance</groupId>
+	    <artifactId>com.springsource.org.aopalliance</artifactId>
+	    <version>1.0.0</version>
+	</dependency>
+	<!-- com.springsource.net.sf.cglib的jar包 -->
+	<dependency>
+	    <groupId>net.sourceforge.cglib</groupId>
+	    <artifactId>com.springsource.net.sf.cglib</artifactId>
+	    <version>2.2.0</version>
+	</dependency>
+	<!-- c3p0的jar包 -->
+	<dependency>
+	    <groupId>com.mchange</groupId>
+	    <artifactId>c3p0</artifactId>
+	    <version>0.9.5.2</version>
+	</dependency>
+	<!-- asm-tree的jar包 -->
+	<dependency>
+	    <groupId>org.ow2.asm</groupId>
+	    <artifactId>asm-tree</artifactId>
+	    <version>7.1</version>
+	</dependency>
+	<!-- asm-commons的jar包 -->
+	<dependency>
+	    <groupId>org.ow2.asm</groupId>
+	    <artifactId>asm-commons</artifactId>
+	    <version>7.1</version>
+	</dependency>
+  </dependencies>
+  <build>
+    <finalName>MavenDemo01</finalName>
+  </build>
+</project>
